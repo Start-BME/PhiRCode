@@ -1,5 +1,5 @@
 # PyGros Product History
-Current Version: 1.0.1
+Current Version: 1.1.2
 ## Python Phigros 0.0
 Build in 2023/1/10
 1. Project determination.
@@ -34,3 +34,7 @@ Build in 2023/1/17
 2. The project name was changed.
 3. Rename Versions.md to History.md.
 4. Open source the project on GitHub.
+## PyGros Score 1.1.2
+Build in 2023/1/18
+1. The project name was changed.
+2. Added the ability to read Licenses.

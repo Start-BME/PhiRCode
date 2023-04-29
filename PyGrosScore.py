@@ -1,11 +1,9 @@
-from os import system,chdir,makedirs,mkdir,getenv,getcwd,rmdir
+from os import system,chdir,mkdir,getenv
 from os import remove as delete
 from os.path import exists,isfile
 import sys as s
 def about():
     print('PyGros Score')
-    print('This project uses the MIT License.')
-    print('This project is made by Start-BME.')
 about()
 chdir(getenv('TEMP'))
 while True:

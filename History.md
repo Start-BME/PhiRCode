@@ -1,5 +1,5 @@
 # PyGros Product History
-Current Version: 1.1.2
+Current Version: 1.1.3
 ## Python Phigros 0.0
 Build in 2023/1/10
 1. Project determination.
@@ -38,3 +38,7 @@ Build in 2023/1/17
 Build in 2023/1/18
 1. The project name was changed.
 2. Added the ability to read Licenses.
+## PyGros Score 1.1.3
+Build in 2023/4/29
+1. 7z.exe was deleted.
+2. "About" text was changed.

@@ -1,6 +1,6 @@
 # PyGros Product History
-Current Version: 1.1.3
-## Python Phigros 0.0
+Current Version: 2
+## Python Phigros 0
 Build in 2023/1/10
 1. Project determination.
 ## Python Phigros Score 0.1
@@ -10,7 +10,7 @@ Build in 2023/1/10
 ## PyGros Score 0.2
 Build in 2023/1/10
 1. The project name was changed.
-## PyGros Score 1.0
+## PyGros Score 1
 Build in 2023/1/11
 1. Python script creation, adding a lot of new features.
 2. ReadMe.md was written.
@@ -42,3 +42,9 @@ Build in 2023/1/18
 Build in 2023/4/29
 1. 7z.exe was deleted.
 2. "About" text was changed.
+## PyGros-Score 2
+Build in 2023/4/30
+1. Remove "Uninstall 7z x64".
+2. Add template.py.
+3. Change the structure.
+4. Heavily rewrite PyGrosScore.py.

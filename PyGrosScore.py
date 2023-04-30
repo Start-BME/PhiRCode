@@ -5,6 +5,7 @@ import sys as s
 def about():
     print('PyGros Score')
 about()
+system('copy template.py >> '+getenv('TEMP'))
 chdir(getenv('TEMP'))
 while True:
     if isfile('BME'):
@@ -16,34 +17,30 @@ while True:
     if not exists('BME\\PGS'):
         mkdir('BME\\PGS')
     chdir('BME\\PGS')
+    system('copy ..\\..\\template.py .')
     print('[F]ile [C]ontrol [A]bout')
-    mbo=input('Options:')
+    mbo=input('Opt. >>>')
     if mbo=='F' or mbo=='f':
-        print('[N]ew Score')
-        print('[S]ave')
-        print('Save .[Z]ip')
-        print('[C]lose')
-        smo=input('Options:')
+        print('''[N]ew
+        [S]ave
+        Save .[Z]ip
+        [C]lose''')
+        smo=input('Opt. >>>')
         if smo=='N' or smo=='n':
-            system('copy '+input('Score File Path:')+' .')
-            system('copy '+input('Music File Path:')+' .')
-            system('copy '+input('Score Picture File Path:')+' .')
-            print('To write info from scratch, enter [Wr].')
-            print('To import an info file, enter the path.')
-            ssm=input('Info file options:')
-            if ssm=='Wr' or ssm=='wR' or ssm=='WR' or ssm=='wr':
+            print('''[I]nfo File
+            [S]core
+            [J]son''')
+            r=input('Opt. >>>')
+            if r=='I' or r=='i':
                 system('echo # >> info.txt')
-                system('echo Name: '+input('Name:')+' >> info.txt')
-                system('echo Path: '+input('Path:')+' >> info.txt')
-                system('echo Song: '+input('Song:')+' >> info.txt')
-                system('echo Picture: '+input('Picture:')+' >> info.txt')
-                system('echo Chart: '+input('Chart:')+' >> info.txt')
-                system('echo Level: '+input('Level:')+' >> info.txt')
-                system('echo Composer: '+input('Composer:')+' >> info.txt')
-                system('echo Charter: '+input('Charter:')+' >> info.txt')
-            else:
-                system('copy '+ssm+' .')
-            print('The operation is complete. You can save using File > Save.')
+                for i in ['Name','Path','Song','Picture','Chart','Level','Composer','Charter']:
+                    system('echo '+i+': '+input(i+':')+' >> info.txt')
+            elif r=='S' or r=='s': 
+                for i in ['Score','Music','Score Picture','Info']:
+                    system('copy '+input(i+' File Path:')+' .')
+                print('The operation is complete. You can save using File > Save.')
+            elif r=='J' or r=='j':
+                system('notepad template.py')
             continue
         elif smo=='S' or smo=='s':
             system('copy . >> '+input('Please select a save location:'))
@@ -57,27 +54,16 @@ while True:
             system('copy . old')
             exit()
         elif smo=='Z' or smo=='z':
-            print('[3]2-bit Zip')
-            print('[6]4-bit Zip')
-            ssm=input('Options:')
-            if ssm=='6':
-                system(s.argv[0]+'\\7-zip\\7z.exe a -t7z '+input('Zip save file:')+' .\*')
-                input('Zipped folder to be Saved.')
-                continue
-            elif ssm=='3':
-                system(s.argv[0]+'\\7-zip\\7z32.exe a -t7z '+input('Zip save file:')+' .\*')
-                input('Zipped folder to be Saved.')
-                continue
-            else:
-                input('Option Error.')
-                continue
+            system(s.argv[0]+'\\7-zip\\7z32.exe a -t7z '+input('Zip save file:')+' .\*')
+            input('Zipped folder to be Saved.')
+            continue
         else:
             input('Option Error.')
             continue
     elif mbo=='C' or mbo=='c':
         print('[C]lear')
         print('[S]ettings')
-        smo=input('Options:')
+        smo=input('Opt. >>>')
         if smo=='C' or smo=='c':
             system('cls')
             continue
@@ -85,19 +71,15 @@ while True:
             print('Settings')
             print('========')
             print('[Z]ip setting:')
-            ssm=input('Options:')
+            ssm=input('Opt. >>>')
             if ssm=='Z' or ssm=='z':
-                print('Uninstall 7-Zip x[6]4 module')
                 print('Uninstall 7-zip x86_[3]2 module')
-                sss=input('Options:')
+                sss=input('Opt. >>>')
                 def rec7z():
                     print('Are you sure you want to uninstall? It will not be recoverable and will need to be re-downloaded from GitHub.')
                     input('If canceled, close the window, otherwise press enter.')
                     chdir(s.argv[0].replace('PyGrosScore.py','7-zip'))
-                if sss=='6':
-                    rec7z()
-                    delete('7z.exe')
-                elif sss=='3':
+                if sss=='3':
                     rec7z()
                     delete('7z32.exe')
                 else:
@@ -111,10 +93,10 @@ while True:
             input('Option Error.')
             continue
     elif mbo=='A' or mbo=='a':
-        print('[A]bout')
-        print('[G]itHub Project')
-        print('[L]icenses')
-        smo=input('Options:')
+        print('''[A]bout
+        [G]itHub Project
+        [L]icenses''')
+        smo=input('Opt. >>>')
         if smo=='A' or smo=='a':
             about()
             continue
@@ -122,9 +104,9 @@ while True:
             system('start https://github.com/users/Start-BME/projects/1')
             continue
         elif smo=='L' or smo=='l':
-            print('[P]roject')
-            print('[7]-zip')
-            ssm=input('Options:')
+            print('''[P]roject
+            [7]-zip''')
+            ssm=input('Opt. >>>')
             if ssm=='P' or ssm=='p':
                 system('notepad.exe '+s.argv[0].replace('PyGrosScore.py','LICENSE'))
             elif ssm=='7':

@@ -1,5 +1,5 @@
 # PyGros Product History
-Current Version: 2
+Current Version: 2.1
 ## Python Phigros 0
 Build in 2023/1/10
 1. Project determination.
@@ -48,3 +48,6 @@ Build in 2023/4/30
 2. Add template.py.
 3. Change the structure.
 4. Heavily rewrite PyGrosScore.py.
+## PyGros-Score 2.1
+Build in 2023/5/7
+1. Simplify import code.

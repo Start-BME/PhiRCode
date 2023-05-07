@@ -1,7 +1,6 @@
-from os import system,chdir,mkdir,getenv
-from os import remove as delete
-from os.path import exists,isfile
-import sys as s
+from os import *
+from os.path import *
+from sys import *
 def about():
     print('PyGros Score')
 about()
@@ -9,9 +8,9 @@ system('copy template.py >> '+getenv('TEMP'))
 chdir(getenv('TEMP'))
 while True:
     if isfile('BME'):
-        delete('BME')
+        remove('BME')
     if isfile('BME\\PGS'):
-        delete('BME\\PGS')
+        remove('BME\\PGS')
     if not exists('BME'):
         mkdir('BME')
     if not exists('BME\\PGS'):
@@ -54,7 +53,7 @@ while True:
             system('copy . old')
             exit()
         elif smo=='Z' or smo=='z':
-            system(s.argv[0]+'\\7-zip\\7z32.exe a -t7z '+input('Zip save file:')+' .\*')
+            system(argv[0]+'\\7-zip\\7z32.exe a -t7z '+input('Zip save file:')+' .\*')
             input('Zipped folder to be Saved.')
             continue
         else:
@@ -78,10 +77,10 @@ while True:
                 def rec7z():
                     print('Are you sure you want to uninstall? It will not be recoverable and will need to be re-downloaded from GitHub.')
                     input('If canceled, close the window, otherwise press enter.')
-                    chdir(s.argv[0].replace('PyGrosScore.py','7-zip'))
+                    chdir(argv[0].replace('PyGrosScore.py','7-zip'))
                 if sss=='3':
                     rec7z()
-                    delete('7z32.exe')
+                    remove('7z32.exe')
                 else:
                     input('Option Error.')
                     continue
@@ -108,9 +107,9 @@ while True:
             [7]-zip''')
             ssm=input('Opt. >>>')
             if ssm=='P' or ssm=='p':
-                system('notepad.exe '+s.argv[0].replace('PyGrosScore.py','LICENSE'))
+                system('notepad.exe '+argv[0].replace('PyGrosScore.py','LICENSE'))
             elif ssm=='7':
-                system(s.argv[0].replace('PyGrosScore.py','7-zip\\Licenses'))
+                system(argv[0].replace('PyGrosScore.py','7-zip\\Licenses'))
         else:
             input('Option Error.')
             continue

@@ -1,5 +1,5 @@
-# PyGros Product History
-Current Version: 2.1
+# PhiRCode History
+Current Version: 2.2
 ## Python Phigros 0
 Build in 2023/1/10
 1. Project determination.
@@ -51,3 +51,7 @@ Build in 2023/4/30
 ## PyGros-Score 2.1
 Build in 2023/5/7
 1. Simplify import code.
+## PhiRCode 2.2
+Build in 2023/5/7
+1. The project name was changed.
+2. Fixed an issue with incorrect History.md names.

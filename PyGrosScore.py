@@ -2,7 +2,7 @@ from os import *
 from os.path import *
 from sys import *
 def about():
-    print('PyGros Score')
+    print('PhiRCode')
 about()
 system('copy template.py >> '+getenv('TEMP'))
 chdir(getenv('TEMP'))

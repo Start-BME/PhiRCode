@@ -1,5 +1,5 @@
 # PhiRCode History
-Current Version: 2.2.1
+Current Version: 3
 ## Python Phigros 0
 Build in 2023/1/10
 1. Project determination.
@@ -58,3 +58,7 @@ Build in 2023/5/7
 ## PhiRCode 2.2.1
 Build in 2023/5/7
 1. Rename Python script.
+## PhiRCode 3
+Build in 2023/5/14
+1. Remove 7-zip.
+2. Fix bugs.

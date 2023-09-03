@@ -8,6 +8,7 @@ if not os.path.exists(d):
     os.makedirs(d)
 if not os.path.exists(os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\'):
     os.makedirs(os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\')
+os.system('copy PhiTCode.py '+os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\')
 os.chdir(d)
 os.system('copy '+n+' '+d)
 os.system('copy '+m+' '+d)
@@ -23,4 +24,5 @@ os.system('echo Charter: '+input('请输入谱师：')+' >> info.txt')
 if os.path.isfile(os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\Dir.var'):
     os.remove(os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\Dir.var')
 os.system('echo "'+d+'\\pygrox.json" >> '+os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\Dir.var')
-input('请右击 PhiTCode.py，用记事本打开，翻到注释的下方开始编写自制谱。')
+os.system('start '+os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\PhiTCode.py')
+input('请按回车键退出……')

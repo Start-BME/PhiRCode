@@ -24,5 +24,5 @@ os.system('echo Charter: '+input('请输入谱师：')+' >> info.txt')
 if os.path.isfile(os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\Dir.var'):
     os.remove(os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\Dir.var')
 os.system('echo "'+d+'\\pygrox.json" >> '+os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\Dir.var')
-os.system('start '+os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\PhiTCode.py')
+os.system('notepad.exe '+os.getenv('PROGRAMDATA')+'\\BME\\PyGros\\PhiTCode.py')
 input('请按回车键退出……')
